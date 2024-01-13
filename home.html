@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+        /* Estilos para a barra de menu */
+        .navbar {
+            background-color: green; /* Cor de fundo */
+        }
+
+        .navbar-nav {
+            margin-left: auto;
+        }
+
+        .nav-item {
+            margin-right: 20px; /* Espaçamento entre os itens do menu */
+        }
+
+        .nav-link {
+            color: white; /* Cor do texto dos links */
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de navegação -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="home.html">KAWASAKI</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="ficha.html">modelos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="formulario.html">Cadastrar-se</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="corporation">
+        <div class="container">
+            <table role="presentation" class="header-table">
+                <tbody>
+                    <tr>
+                        <td role="presentation">
+                            <h1>HISTORIA DA EMPRESSA</h1>
+                            <h1 class="headTwo">Kawasaki Industries</h1>
+                        </td>
+                        <td>
+                            <div class="border-line"></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="row">
+                <div class="col-lg-5 col-sm-12 multi">
+                    <p class="pOne">
+                        A Kawasaki é uma corporação multinacional com mais de cinquenta subsidiárias (fábricas, centros de distribuição e sedes de marketing e vendas) na maioria das grandes cidades do mundo. Além disso, a Kawasaki está fazendo o possível para cumprir suas responsabilidades com o planeta, sendo consciente do meio ambiente. A empresa se esforça para desenvolver plantas que respeitem o meio ambiente, tecnologias para proteger a terra e novas fontes de energia que ajudarão a garantir um suprimento estável de recursos e energia, e tecnologias de conservação e reciclagem de energia.
+                    </p>
+                </div>
+                <div class="col-lg-7 col-sm-12">
+                    <img class="img-fluid" src="data:image/jpeg;base64,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" alt="Imagem da Kawasaki">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container2">
+        <div class="container">
+            <div class="row p-xs-0">
+                <div class="col-lg-6 offset-lg-2">
+                    <h2 class="headFour">Em 1878, o fundador Shozo Kawasaki,</h2>
+                    <p class="pOne">começou um estaleiro para construir navios de aço transoceânicos. Em 1886, a incipiente operação foi expandida e passou a ser conhecida como Estaleiro Kawasaki. Dez anos depois, em 1896, O Estaleiro Kawasaki foi incorporado e Kojiro Matsukata foi apontado primeiro presidente da companhia. Foi iniciada a fabricação de locomotivas, vagões de carga e passageiros no recém-inaugurado complexo industrial Hyogo Works, e no ano seguinte, a produção de turbinas navais a vapor foi iniciada no estaleiro.</p>
+                </div>
+                <div class="col-lg-4 col-sm-12">
+                    <img class="img-fluid" src="https://th.bing.com/th/id/OIP.qLAwgci5J2-807JeP9RbuwHaEK?w=288&h=180&c=7&r=0&o=5&pid=1.7" alt="Imagem de uma locomotiva">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container3">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h2 class="headFour">AS MÁQUINAS DE ENGENHARIA CIVIL</h2>
+                <p class="pOne">e máquinas de construção estão contribuindo para a criação de novas cidades com suas pontes e arranha-céus. O sucesso do Eurotunnel, o projeto de grande escala que liga a Inglaterra à França, deve muito às duas máquinas de perfuração de túneis fabricadas pela Kawasaki. A empresa também construiu as máquinas de blindagem - a maior do mundo, com mais de 46 pés de diâmetro - para a construção da Rodovia Trans-Tokyo Bay.</p>
+                
+            </div>
+        </div>
+    </section>
+    <div class="environment">
+        <section class="row">
+            <img src="https://www.kawasakibrasil.com/Content/Images/History/img_100years_xs@2x.jpg" alt="História" class="float-left" style="max-width: 30%; margin-right: 20px;">
+            <div class="col-12 col-lg-6">
+                <h2 class="headFour">KAWASAKI</h2>
+                <p class="pOne">está fazendo o possível para cumprir suas responsabilidades com o planeta, sendo consciente do meio ambiente. A empresa se esforça para desenvolver plantas que respeitem o meio ambiente, tecnologias para proteger a terra e novas fontes de energia que ajudarão a garantir um suprimento estável de recursos e energia, e tecnologias de conservação e reciclagem de energia.</p>
+                <br>
+                <p class="pOne">A Usina de Ciclo Combinado (CCPP), por exemplo, usa gás natural com baixo poluente para ativar as turbinas que geram energia, enquanto o calor de exaustão é usado para gerar eletricidade adicional. O sistema de reciclagem de recursos da Kawasaki usa o calor dos incineradores de lixo da cidade para abastecer refrigeradores e aquecedores e aquecer a água; Ele também coleta recursos reutilizáveis ​​de vários tipos de lixo</p>
+                <br>
+                <p class="pOne">Outras tecnologias, incluindo tratamento de água, dessulfurização de gases de combustão e instalações de desnitrificação, também estão se mostrando altamente eficazes na proteção do meio ambiente e na conservação de energia. A Kawasaki está sempre monitorando tecnologias futuras e está bem posicionada para entrar na era da energia de fusão que se seguirá.</p>
+            </div>
+        </section>
+    </div>
+    
+    
+    </div>
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
