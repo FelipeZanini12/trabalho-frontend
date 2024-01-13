@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+
+    /* Restante do seu código CSS permanece o mesmo */
+
+    /* Estilos para o formulário de login */
+    .login-container {
+        text-align: center;
+        margin-top: 50px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: green; /* Cor de fundo do formulário */
+        color: white; /* Cor do texto dentro do formulário */
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    p.error-message {
+        color: red;
+        font-size: 14px;
+    }
+
+    button {
+        background-color: black; /* Cor do botão */
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+
+
+
+
+
+
+        /* Estilos para a barra de menu */
+        .navbar {
+            background-color: green; /* Cor de fundo  */
+        }
+
+        .navbar-nav {
+            margin-left: auto;
+        }
+
+        .nav-item {
+            margin-right: 20px; /* Espaçamento entre os itens do menu */
+        }
+
+        .nav-link {
+            color: white; /* Cor do texto dos links */
+        }
+
+       
+
+       
+
+       
+
+
+        /* Estilos para o formulário de login */
+        .login-container {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        p.error-message {
+            color: red;
+            font-size: 14px;
+        }
+
+        button {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de navegação -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="home.html">KAWASAKI</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="ficha.html">modelos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="formulario.html">Cadastrar-se</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="login-container">
+            <h2>Tela de Login</h2>
+            <div class="form-group">
+                <label for="username">E-mail:</label>
+                <input type="text" id="username" placeholder="Digite seu e-mail">
+                <p class="error-message" id="email-error"></p>
+            </div>
+            <div class="form-group">
+                <label for="password">Senha:</label>
+                <input type="password" id="password" placeholder="Digite sua senha">
+                <p class="error-message" id="password-error"></p>
+            </div>
+            <button onclick="validateLogin()">Entrar</button>
+        </div>
+    </div>
+
+    <script>
+        function validateLogin() {
+            const email = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Verifica se o e-mail é válido usando uma expressão regular simples
+            const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            if (!emailRegex.test(email)) {
+                document.getElementById('email-error').textContent = "E-mail inválido.";
+                return;
+            } else {
+                document.getElementById('email-error').textContent = "";
+            }
+
+            // Verifica se a senha contém pelo menos um caractere especial
+            const specialChars = /[!@#$%^&*()_+{}\[\]:;<>,.?~\\]/;
+            if (!specialChars.test(password)) {
+                document.getElementById('password-error').textContent = "A senha deve conter pelo menos um caractere especial.";
+                return;
+            } else {
+                document.getElementById('password-error').textContent = "";
+            }
+
+            // validação bem-sucedida, o usuário realiza a ação desejada.
+            alert(`Login bem-sucedido para o e-mail: ${email}`);
+        }
+    </script>
+</body>
+</html>
